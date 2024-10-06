@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Shawty</title>
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-image: url(fondo.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            height: 100vh;
+            margin: 0;
+            overflow-x: hidden;
+            width: 100vw;
+        }
+
+        .bg {
+            background-image: url('/api/placeholder/1920/1080');
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            filter: brightness(40%);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+
+        .content {
+            position: relative;
+            color: white;
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 2rem;
+            box-sizing: border-box;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            position: absolute;
+            top: -20px;
+            right: 200px;
+            width: 80px;
+            /* Ajusta este valor según el tamaño que desees para tu logo */
+            height: auto;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .slogan {
+            font-style: italic;
+            margin-top: 0.5rem;
+            font-size: 1.2rem;
+            opacity: 0.8;
+
+        }
+
+        h4 {
+            text-align: center;
+            font-size: 3rem;
+        }
+
+        .review {
+            max-width: 800px;
+            margin: 4rem auto;
+            text-align: center;
+            padding: 2rem;
+            border-radius: 20px;
+
+        }
+
+        .services {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .service {
+            flex: 1;
+            min-width: 250px;
+            max-width: 350px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .service img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .service-content {
+            padding: 1.5rem;
+        }
+
+        .service h3 {
+            margin-top: 0;
+            font-size: 1.4rem;
+            color: #fff;
+        }
+
+        .service p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        .galeria-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            padding: 10px;
+            width: 100%;
+            max-width: 100%;
+            box-sizing: border-box;
+            transform: translateX(5%);
+        }
+
+        .imagen-enlazada {
+            width: 30%;
+            max-width: 180px;
+            transition: transform 0.3s ease;
+        }
+
+        .imagen-enlazada:hover {
+            transform: scale(1.05);
+        }
+
+        .imagen-enlazada img {
+            width: 40%;
+            height: auto;
+            border-radius: 6px;
+        }
+
+        @media (max-width: 768px) {
+            .galeria-container {
+                transform: none;
+            }
+
+            .imagen-enlazada {
+                width: 60%;
+                max-width: none;
+            }
+            .logo{
+            width: 0%;
+            max-width: 0px;
+            width: 0%;
+            height: auto;
+            }
+        }
+
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="bg"></div>
+    <div class="content">
+        <header>
+            <div>
+                <h1>Studio Shawty</h1>
+                <p class="slogan">Capturamos cada momento</p>
+            </div>
+            <div class="logo">
+                <img src="logo.png" alt="Logo de Studio Shawty">
+            </div>
+        </header>
+        <main>
+            <h4 id="coso"> Servicios </h4>
+            <div class="services">
+                <a href="personal.html">
+                    <div class="service">
+                        <div class="service-content">
+                            <h3>Personales</h3>
+                            <p>Capturo momentos únicos que reflejan tu esencia. Mi objetivo es que cada imagen cuente tu
+                                historia de manera auténtica y natural. Desde retratos casuales hasta sesiones más
+                                elaboradas, cada foto será un reflejo de quién eres.</p>
+                        </div>
+                        <img src="personal.jpg" alt="Fotografía personal">
+                    </div>
+                </a>
+                <a href="eventos especiales.html">
+                    <div class="service">
+                        <div class="service-content">
+                            <h3>Eventos especiales</h3>
+                            <p>Transformo tus eventos especiales en recuerdos inolvidables. Ya sea una boda, un
+                                cumpleaños o una celebración importante, cada instante será capturado con detalle y
+                                emoción, para que puedas revivirlo una y otra vez.</p>
+                        </div>
+                        <img src="15 años.png" alt="Fotografía de eventos especiales">
+                    </div>
+                </a>
+                <a href="empresarial.html">
+                    <div class="service">
+                        <div class="service-content">
+                            <h3>Fotografía Corporativa</h3>
+                            <p>Ofrezco servicios de fotografía profesional para negocios y empresas, asegurando imágenes
+                                que reflejan la identidad y los valores de tu marca. Desde sesiones para perfiles
+                                ejecutivos hasta cobertura de eventos empresariales.</p>
+                        </div>
+                        <img src="corporativa.png" alt="Fotografía corporativa">
+                    </div>
+                </a>
+            </div>
+
+            <h4 id="coso"> Contactos</h4>
+            <div class="galeria-container">
+                <a href="https://wa.link/xtfcbx" class="imagen-enlazada">
+                    <img src="whatsApp.png" alt="WhatsApp">
+                </a>
+                <a href="https://www.instagram.com/marvins__h/" class="imagen-enlazada">
+                    <img src="Instagram.png" alt="Instagram">
+                </a>
+                <a href="mailto:borjahurtadomarvinjosue%40gmail.com?&subject=Servicio%20de%20fotograf%C3%ADa%20&body=Quisiera%20saber%20más%20información%20sobre%20un%20servicio%20de%20fotografía"
+                    class="imagen-enlazada">
+                    <img src="Gmail.png" alt="Gmail">
+                </a>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; 2024 | Marvin Josue Borja Hurtado | Studio Shawty</p>
+        </footer>
+    </div>
+</body>
+
+</html>

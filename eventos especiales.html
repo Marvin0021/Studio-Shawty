@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios de Fotografía Personal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+           background: #007991;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #78ffd6, #007991);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #78ffd6, #007991); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+
+        header {
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 2px solid #ddd;
+        }
+
+        h1,
+        h2 {
+            color: #2c3e50;
+        }
+
+        .service {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #2980b9;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #ddd;
+        }
+         img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .gallery img {
+            width: 32%;
+            height: auto;
+        }
+         #backButton {
+            position: fixed;
+            left: 20px;
+            bottom: 20px;
+            background-color: #6f7479;
+            color: white;
+            border: none;
+            padding: 15px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+            font-size: 16px;
+            transition: opacity 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        #backButton.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        #backButton:hover {
+            background-color: #35373a;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Servicios de fotografía de Eventos Especiales - Studio Shawty</h1>
+        
+    </header>
+    <button id="backButton" onclick="goBack()">Regresar</button>
+
+
+    <main>
+        <section>
+            <h2>Galería de Ejemplos</h2>
+            <p>Algunos de nuestros trabajos en sesiones fotográficas personales.</p>
+            <div class="gallery">
+                <img src="eventos1.jpg" alt="Ejemplo 1">
+                <img src="evento4.jpg" alt="Ejemplo 2">
+                <img src="evento5.jpg" alt="Ejemplo 3">
+            </div>
+        </section>
+        <section class="service">
+        <h2>Descripción de Servicios</h2>
+        <p>En <strong>Studio Shawty</strong>, sabemos que los eventos especiales son momentos únicos que merecen ser
+            inmortalizados. Ofrecemos cobertura profesional para:</p>
+        <ul>
+            <li><strong>Bodas:</strong> Capturamos cada instante del día más importante de tu vida, desde la
+                ceremonia hasta la fiesta.</li>
+            <li><strong>15 Años:</strong> Fotografía y video que retratan la emoción y el glamour de esta
+                celebración única.</li>
+            <li><strong>Graduaciones:</strong> Celebra el fin de una etapa con fotos que te acompañarán toda la
+                vida.</li>
+            <li><strong>Cumpleaños y Aniversarios:</strong> Registra cada momento de celebraciones personales o
+                familiares.</li>
+        </ul>
+        </section>
+
+        <section class="service">
+            <h2>Paquetes y Precios</h2>
+            <p>Contamos con diferentes paquetes para adaptarnos a tus necesidades:</p>
+            <ul>
+                <li><strong>Paquete Básico:</strong> Cobertura del evento por 4 horas. Incluye 50 fotos editadas.
+                    <strong>$100</strong>
+                </li>
+                <li><strong>Paquete Completo:</strong> Cobertura de todo el evento, desde la preparación hasta la
+                    fiesta. Incluye 100 fotos editadas y video resumen. <strong>$160</strong></li>
+                <li><strong>Paquete Premium:</strong> Incluye fotos impresas, álbum fotográfico personalizado, y video
+                    completo del evento. <strong>$300</strong></li>
+            </ul>
+        </section>
+
+        <section class="service">
+            <h2>Proceso de Trabajo</h2>
+            <p>Nos aseguramos de que todo salga perfecto desde el inicio hasta la entrega final de las fotos y videos:
+            </p>
+            <ol>
+                <li>Reunión inicial para conocer tus expectativas y preferencias.</li>
+                <li>Cobertura completa del evento por fotógrafos profesionales.</li>
+                <li>Entrega de fotos y videos editados de acuerdo a tus gustos, ya sea en formato digital o impreso.
+                </li>
+            </ol>
+        </section>
+        <section class="service">
+            <h2>Preguntas Frecuentes</h2>
+            <ul>
+                <li><strong>¿Cómo reservo una fecha?</strong> Contáctanos lo antes posible para verificar
+                    disponibilidad. Recomendamos reservar con al menos 2 meses de anticipación.</li>
+                <li><strong>¿Cuánto tiempo tarda la entrega de fotos y videos?</strong> La entrega de fotos digitales
+                    suele tardar entre 2 y 3 semanas, mientras que los videos completos se entregan en 4 semanas.</li>
+                <li><strong>¿Puedo personalizar mi paquete?</strong> Sí, ofrecemos la opción de personalizar paquetes
+                    según tus necesidades específicas.</li>
+            </ul>
+        </section>
+
+        <a href="https://wa.link/a5gehm" class="cta-button">Reserva tu Sesión</a>
+    </main>
+  <script>
+    // Función para volver a la página anterior
+    function goBack() {
+        window.history.back();
+    }
+    window.addEventListener('scroll', function () {
+        const button = document.getElementById('backButton');
+        if (window.scrollY > 100) { 
+            button.classList.add('show');
+        } else {
+            button.classList.remove('show');
+        }
+    });
+</script>
+
+    <footer>
+        <p>&copy; 2024 Studio Shawty - Fotografía  de Eventos Especiales.</p>
+    </footer>
+</body>
+
+</html>

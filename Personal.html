@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios de Fotografía Personal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #007991;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #78ffd6, #007991);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #78ffd6, #007991); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+
+        header {
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 2px solid #ddd;
+        }
+
+        h1,
+        h2 {
+            color: #2c3e50;
+        }
+
+        .service {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #2980b9;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #ddd;
+        }
+         img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .gallery img {
+            width: 32%;
+            height: auto;
+        }
+         #backButton {
+            position: fixed;
+            left: 20px;
+            bottom: 20px;
+            background-color: #82868a;
+            color: white;
+            border: none;
+            padding: 15px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+            font-size: 16px;
+            transition: opacity 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        #backButton.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        #backButton:hover {
+            background-color: #585d63;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Servicios de Fotografía Personal - Studio Shawty</h1>
+    </header>
+<button id="backButton" onclick="goBack()">Regresar</button>
+
+    <main>
+        <section>
+            <h2>Galería de Ejemplos</h2>
+            <p>Algunos de nuestros trabajos en sesiones fotográficas personales.</p>
+            <div class="gallery">
+                <img src="personal1.jpg" alt="Ejemplo 1">
+                <img src="personal2.jpg" alt="Ejemplo 2">
+                <img src="personal3.jpg" alt="Ejemplo 3">
+            </div>
+        </section>
+        <section class="service">
+            <h2>Descripción de Servicios</h2>
+            <p>Ofrecemos una amplia variedad de servicios de fotografía personal adaptados a tus necesidades:</p>
+            <ul>
+                <li><strong>Sesiones Individuales:</strong> Capturamos tu esencia en retratos profesionales.</li>
+                <li><strong>Fotos para Redes Sociales:</strong> Ideal para influencers y quienes necesitan contenido de
+                    calidad.</li>
+                <li><strong>Fotos Lifestyle:</strong> Capturas naturales de tu vida cotidiana o tus hobbies.</li>
+            </ul>
+        </section>
+
+        <section class="service">
+            <h2>Proceso de Trabajo</h2>
+            <p>Nos aseguramos de que todo salga perfecto desde el inicio hasta la entrega final de las fotos y videos:
+            </p>
+            <ol>
+                <li>Reunión inicial para conocer tus expectativas y preferencias.</li>
+                <li>Cobertura completa del evento por fotógrafos profesionales.</li>
+                <li>Entrega de fotos y videos editados de acuerdo a tus gustos, ya sea en formato digital o impreso.
+                </li>
+            </ol>
+        </section>
+        <section class="service">
+            <h2>Proceso de Trabajo</h2>
+            <p>Nos aseguramos de que tu experiencia sea cómoda y profesional en todo momento:</p>
+            <ol>
+                <li>Nos reunimos para entender tus necesidades y estilo deseado.</li>
+                <li>Te guiamos durante la sesión para que te sientas a gusto.</li>
+                <li>Entregamos fotos editadas y personalizadas en tiempo récord.</li>
+                <li>Cobertura flexible (por horas)</li>
+                <li>Múltiples cambios de vestuario</li>
+                <li>Sesiones en exteriores o en estudio</li>
+            </ol>
+        </section>
+        <section class="service">
+            <h2>Preguntas Frecuentes</h2>
+            <ul>
+                <li><strong>¿Cómo debo prepararme para la sesión?</strong> Usa ropa con la que te sientas cómodo y que
+                    refleje tu personalidad.</li>
+                <li><strong>¿Cuánto tiempo dura una sesión?</strong> Entre 1 y 2 horas, dependiendo del paquete elegido.
+                </li>
+                <li><strong>¿Cuánto tiempo tarda la entrega de fotos?</strong> Normalmente entre 5 a 7 días laborales.
+                </li>
+            </ul>
+        </section>
+
+        <a href="https://wa.link/a5gehm" class="cta-button">Reserva tu Sesión</a>
+    </main>
+    <script>
+        // Función para volver a la página anterior
+        function goBack() {
+            window.history.back();
+        }
+
+        // Mostrar el botón solo cuando hacemos scroll hacia abajo
+        window.addEventListener('scroll', function () {
+            const button = document.getElementById('backButton');
+            if (window.scrollY > 100) { // Si bajamos 100px o más, se muestra el botón
+                button.classList.add('show');
+            } else {
+                button.classList.remove('show');
+            }
+        });
+    </script>
+
+    <footer>
+        <p>&copy; 2024 Studio Shawty - Fotografía Personal </p>
+    </footer>
+
+</body>
+
+</html>

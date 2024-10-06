@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios de Fotografía Corporativa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #56CCF2;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #2F80ED, #56CCF2);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #2F80ED, #56CCF2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+
+        header {
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 2px solid #ddd;
+        }
+
+        h1,
+        h2 {
+            color: #2c3e50;
+        }
+
+        .service {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #2980b9;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #ddd;
+        }
+         img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .gallery img {
+            width: 32%;
+            height: auto;
+        }
+         .pricing-table {
+            width: 100%;
+            margin: 20px 0;
+            border-collapse: collapse;
+        }
+
+        .pricing-table th, .pricing-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .pricing-table th {
+            background-color: #f4f4f4;
+            color: #2c3e50;
+        }
+         #backButton {
+            position: fixed;
+            left: 20px;
+            bottom: 20px;
+            background-color: #6f7479;
+            color: white;
+            border: none;
+            padding: 15px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+            font-size: 16px;
+            transition: opacity 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        #backButton.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        #backButton:hover {
+            background-color: #35373a;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Servicios de Fotografía Corporativa - Studio Shawty</h1>
+       
+    </header>
+    <button id="backButton" onclick="goBack()">Regresar</button>
+
+    <main>
+        <section>
+            <h2>Galería de Ejemplos</h2>
+            <p>Algunos de nuestros trabajos en sesiones fotográficas corporativas.</p>
+            <div class="gallery">
+                <img src="corporativa1.jpg" alt="Ejemplo 1">
+                <img src="corporativa2.jpg" alt="Ejemplo 2">
+                <img src="corporativa3.jpg" alt="Ejemplo 3">
+            </div>
+        </section>
+        <section class="service">
+            <h2>Fotografía de Productos</h2>
+            <p>Destaca tus productos con imágenes que cautiven a tus clientes. Ofrecemos fotografía de alta calidad que
+                resalta cada detalle y hace que tus productos brillen en cualquier plataforma.</p>
+            <ul>
+                <li>Fotografía en estudio o en locación</li>
+                <li>Edición avanzada para un aspecto impecable</li>
+                <li>Ideal para catálogos, sitios web y redes sociales</li>
+            </ul>
+        </section>
+
+        <section class="service">
+            <h2>Fotografía de Eventos Corporativos</h2>
+            <p>Cubrimos tus eventos corporativos con profesionalismo y atención al detalle, capturando cada momento
+                clave,
+                desde conferencias y seminarios hasta lanzamientos de productos y eventos de networking.</p>
+            <ul>
+                <li>Cobertura discreta y profesional</li>
+                <li>Imágenes que capturan la esencia de tu evento</li>
+                <li>Entrega rápida en formato digital</li>
+            </ul>
+        </section>
+
+        <section class="service">
+            <h2>Fotografía para Equipos y Retratos Corporativos</h2>
+            <p>Proyecta la mejor imagen de tu equipo de trabajo con retratos corporativos que reflejan profesionalismo y
+                cercanía. Perfecto para perfiles de LinkedIn, sitios web empresariales y material promocional.</p>
+            <ul>
+                <li>Sesiones en la oficina o en estudio</li>
+                <li>Retratos individuales y grupales</li>
+                <li>Edición para mantener una apariencia coherente y profesional</li>
+            </ul>
+        </section>
+
+        <section class="service">
+            <h2>Fotografía de Infraestructura y Oficinas</h2>
+            <p>Haz que tus instalaciones destaquen con fotografías de alta calidad de tus oficinas, fábricas o cualquier
+                infraestructura empresarial. Ideal para promociones internas y externas, y materiales de marketing.</p>
+            <ul>
+                <li>Fotografía de interiores y exteriores</li>
+                <li>Optimización de imágenes para publicaciones en línea o impresas</li>
+                <li>Resalta las características únicas de tus instalaciones</li>
+            </ul>
+        </section>
+        <section class="service">
+            <h2>Servicios y precios</h2>
+            <table class="pricing-table">
+                <thead>
+                    <tr>
+                        <th>Servicio</th>
+                        <th>Duración</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Fotografía de Productos</td>
+                        <td>2 horas</td>
+                        <td>$150</td>
+                    </tr>
+                    <tr>
+                        <td>Fotografía de Eventos Corporativos</td>
+                        <td>Por evento completo</td>
+                        <td>$300</td>
+                    </tr>
+                    <tr>
+                        <td>Retratos Corporativos</td>
+                        <td>1 hora</td>
+                        <td>$100</td>
+                    </tr>
+                    <tr>
+                        <td>Fotografía de Infraestructura</td>
+                        <td>3 horas</td>
+                        <td>$200</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+<section class="faq-section">
+    <h2>Preguntas Frecuentes</h2>
+
+    <div class="faq">
+        <h3>¿Cuánto tiempo se tarda en entregar las fotos?</h3>
+        <p>El tiempo de entrega varía según el servicio. Generalmente, las fotos digitales se entregan entre 3 y 7 días
+            después del evento o sesión.</p>
+    </div>
+
+    <div class="faq">
+        <h3>¿Ofrecen paquetes personalizados?</h3>
+        <p>Sí, ofrecemos paquetes personalizados adaptados a las necesidades de tu empresa. Contáctanos para obtener una
+            cotización ajustada a tus requerimientos.</p>
+    </div>
+
+    <div class="faq">
+        <h3>¿Puedo obtener las fotos impresas?</h3>
+        <p>Por supuesto. Además de las fotos digitales, ofrecemos impresiones de alta calidad y álbumes fotográficos
+            según tus preferencias.</p>
+    </div>
+
+    <div class="faq">
+        <h3>¿Cubren eventos en diferentes locaciones?</h3>
+        <p>Sí, cubrimos eventos tanto a nivel local como en otras ciudades. Contáctanos para más información sobre
+            tarifas de desplazamiento.</p>
+    </div>
+
+</section>
+        <a href="https://wa.link/a5gehm" class="cta-button">Reserva tu Sesión</a>
+    </main>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+        window.addEventListener('scroll', function () {
+            const button = document.getElementById('backButton');
+            if (window.scrollY > 100) {
+                button.classList.add('show');
+            } else {
+                button.classList.remove('show');
+            }
+        });
+    </script>
+
+    <footer>
+        <p>&copy; 2024 Studio Shawty - Fotografía Corporativa. </p>
+    </footer>
+
+</body>
+
+</html>
